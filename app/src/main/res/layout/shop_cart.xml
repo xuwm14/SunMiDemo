@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/head1"
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:paddingLeft="@dimen/textPadding"
+        android:paddingRight="@dimen/textPadding"
+        app:layout_heightPercent="7%">
+
+        <TextView
+            android:textSize="@dimen/normalTextSize"
+            android:text="购物车"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/cleanShopCart"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:textSize="@dimen/normalTextSize"
+            android:layout_alignParentRight="true"
+            android:text="清空"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:background="@drawable/gray_top"
+        android:id="@+id/tag_text"
+        android:layout_width="match_parent"
+        android:layout_below="@id/head1"
+        app:layout_heightPercent="7%">
+
+        <TextView
+            android:text="商品名称"
+            android:id="@+id/total_txt"
+            android:textSize="@dimen/normalTextSize"
+            android:gravity="center"
+            app:layout_widthPercent="33%"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="商品单价"
+            android:layout_toRightOf="@id/total_txt"
+            android:textSize="@dimen/normalTextSize"
+            android:gravity="center"
+            app:layout_widthPercent="33%"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="商品数量"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/normalTextSize"
+            android:gravity="center"
+            app:layout_widthPercent="33%"
+            android:layout_height="match_parent" />
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <ListView
+        android:layout_below="@id/tag_text"
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="67%" />
+
+    <RelativeLayout
+        android:background="@drawable/border_top"
+        android:layout_below="@id/list1"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/textPadding"
+        android:paddingRight="@dimen/textPadding"
+        app:layout_heightPercent="9%">
+
+        <TextView
+            android:textSize="@dimen/normalTextSize"
+            android:gravity="center"
+            android:text="合计："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:id="@+id/total_price"
+            android:text="￥137.20"
+            android:textSize="@dimen/normalTextSize"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_opt"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="104px">
+
+        <LinearLayout
+            android:clickable="true"
+            android:onClick="onClick"
+            android:focusable="true"
+            android:id="@+id/openShop"
+            android:layout_weight="1"
+            android:background="#808080"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent" >
+
+            <com.song.sunmidemo.NumImageView
+                android:id="@+id/shopCnt"
+                android:layout_width="60dp"
+                android:scaleType="centerInside"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:paddingRight="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_shopping2"/>
+
+            <TextView
+                android:id="@+id/shopPrice"
+                android:layout_width="wrap_content"
+                android:textSize="30dp"
+                android:textColor="#ffffff"
+                android:text="￥4.00"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pay"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#FF4500"
+            android:textSize="30dp"
+            android:text="快速支付"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#dcdcdc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/head_info"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="6%"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:text="收银台"
+        android:padding="5dp"
+        android:gravity="center"
+        >
+
+    </TextView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/head_info"
+        app:layout_heightPercent="89%">
+
+        <com.qmuiteam.qmui.widget.QMUIFloatLayout
+            android:id="@+id/product_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="left"
+            app:qmui_childHorizontalSpacing="20dp"
+            app:qmui_childVerticalSpacing="20dp"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_opt"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="104px">
+
+        <LinearLayout
+            android:id="@+id/openShop"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:background="#808080"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent" >
+
+            <com.song.sunmidemo.NumImageView
+                android:id="@+id/shopCnt"
+                android:layout_width="60dp"
+                android:scaleType="centerInside"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:paddingRight="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_shopping2"/>
+
+            <TextView
+                android:id="@+id/shopPrice"
+                android:layout_width="wrap_content"
+                android:textSize="30dp"
+                android:textColor="#ffffff"
+                android:text="￥4.00"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pay"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#FF4500"
+            android:textSize="30dp"
+            android:text="快速支付"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

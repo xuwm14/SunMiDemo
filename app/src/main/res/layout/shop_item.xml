@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="50dp"
+    android:descendantFocusability="blocksDescendants"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/name"
+        android:textColor="@color/goodTextColor"
+        android:text="可口可乐"
+        android:textSize="@dimen/normalTextSize"
+        android:gravity="center"
+        app:layout_widthPercent="33%"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:textColor="@color/goodTextColor"
+        android:text="￥6.0"
+        android:layout_toRightOf="@id/name"
+        android:textSize="@dimen/normalTextSize"
+        android:gravity="center"
+        app:layout_widthPercent="33%"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        app:layout_widthPercent="33%"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/minusGoodNum"
+            android:focusable="true"
+            android:clickable="true"
+            android:src="@drawable/ic_minus"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:text="1"
+            android:id="@+id/goodNum"
+            android:textColor="@color/goodTextColor"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/normalTextSize"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/addGoodNum"
+            android:focusable="true"
+            android:clickable="true"
+            android:src="@drawable/ic_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

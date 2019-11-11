@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="productPadding">5dp</dimen>
+    <dimen name="textPadding">30dp</dimen>
+    <dimen name="normalTextSize">20dp</dimen>
+</resources>
